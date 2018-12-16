@@ -1,7 +1,6 @@
 package utills;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -17,22 +16,24 @@ public class BaseClass {
 	public static Properties prop;
 	
 
-	public static void setUp(String browser) {
+	public void setUp() {
 
 		initProperties(Constants.configFilePath);
 		String browserName=prop.getProperty("browser");
+		String getOSName= Constants.operationSystem;
+		
 		
 		if (browserName.equalsIgnoreCase("chrome")) {
-			if (System.getProperty("os.name").contains("Mac")) {
+			if (getOSName.contains("Mac")) {
 			System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver");
-			} else if (System.getProperty("os.name").contains("Windows")) {
+			} else if (getOSName.contains("Windows")) {
 				System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver.exe");
 			}
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			if (System.getProperty("os.name").contains("Mac")) {
+			if (getOSName.contains("Mac")) {
 				System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver.exe");
-			} else if (System.getProperty("os.name").contains("Windows")) {
+			} else if (getOSName.contains("Windows")) {
 				System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver");
 			}
 			driver = new FirefoxDriver();
@@ -41,15 +42,15 @@ public class BaseClass {
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		if (System.getProperty("os-name").contains("Mac")) {
+		if (getOSName.contains("Mac")) {
 			driver.manage().window().fullscreen();}
-		else if (System.getProperty("os.name").contains("Windows")){
+		else if (getOSName.contains("Windows")){
 			driver.manage().window().maximize();
 		}
 		driver.get(prop.getProperty("url"));
 	}
 	
-	public static void tearDown () {
+	public void tearDown () {
 		driver.quit();
 	}
 	
