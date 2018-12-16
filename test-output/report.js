@@ -12,6 +12,7 @@ formatter.feature({
   "id": "assign-leaves",
   "keyword": "Feature"
 });
+
 formatter.scenarioOutline({
   "line": 6,
   "name": "Title of your scenario",
@@ -19,6 +20,7 @@ formatter.scenarioOutline({
   "id": "assign-leaves;title-of-your-scenario",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
+
 });
 formatter.step({
   "line": 7,
@@ -131,6 +133,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 7,
+
   "name": "User navigate to leave page",
   "keyword": "Given "
 });
@@ -169,6 +172,7 @@ formatter.step({
     4,
     5
   ],
+
   "keyword": "And "
 });
 formatter.step({
@@ -204,6 +208,7 @@ formatter.match({
   "location": "AssignLeaveSteps.i_enter_and_select(String,String)"
 });
 formatter.result({
+
   "status": "skipped"
 });
 formatter.match({
@@ -246,12 +251,16 @@ formatter.result({
 });
 formatter.match({
   "location": "AssignLeaveSteps.user_click_on_Assign_button()"
+
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 52140069,
+  "status": "passed"
 });
 formatter.after({
+
   "duration": 659351413,
+
   "status": "passed"
 });
 formatter.uri("jobs.feature");

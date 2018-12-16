@@ -21,8 +21,17 @@ public class LoginPage extends BaseClass {
 	@FindBy(how = How.XPATH, using = "//img[contains(@src,'logo')]")
 	public WebElement logo;
 
+	@FindBy(how=How.ID , using="welcome")
+	private WebElement LoggedUser;
+	
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
+	}
+	
+	public String getLoggedUser() {
+		String getUser=LoggedUser.getText();
+		return getUser.trim().substring(8);
+		
 	}
 
 
