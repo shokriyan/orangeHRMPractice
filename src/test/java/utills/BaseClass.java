@@ -1,7 +1,6 @@
 package utills;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -17,11 +16,13 @@ public class BaseClass {
 	public static Properties prop;
 	
 
-	public static void setUp(String browser) {
+	public void setUp() {
 
 		initProperties(Constants.configFilePath);
 		String browserName=prop.getProperty("browser");
 		String getOSName= Constants.operationSystem;
+		
+		
 		if (browserName.equalsIgnoreCase("chrome")) {
 			if (getOSName.contains("Mac")) {
 			System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver");
@@ -49,7 +50,7 @@ public class BaseClass {
 		driver.get(prop.getProperty("url"));
 	}
 	
-	public static void tearDown () {
+	public void tearDown () {
 		driver.quit();
 	}
 	
