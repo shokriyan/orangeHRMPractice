@@ -13,7 +13,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 4823682739,
+  "duration": 5068038981,
   "status": "passed"
 });
 formatter.scenario({
@@ -37,12 +37,12 @@ formatter.step({
 });
 formatter.step({
   "line": 7,
-  "name": "user click on Login Buton",
+  "name": "user click on Login button",
   "keyword": "Then "
 });
 formatter.step({
   "line": 8,
-  "name": "user successfully Logg in",
+  "name": "user successfully Logg in as \"Admin\"",
   "keyword": "And "
 });
 formatter.match({
@@ -59,25 +59,31 @@ formatter.match({
   "location": "LoginSteps.user_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 1684612049,
+  "duration": 384369484,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.user_click_on_Login_Button()"
+  "location": "LoginSteps.user_click_on_Login_button()"
 });
 formatter.result({
-  "duration": 16458807032,
-  "error_message": "java.lang.NullPointerException\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:559)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy20.click(Unknown Source)\r\n\tat pages.LoginPage.loginButton(LoginPage.java:38)\r\n\tat stepDefinition.LoginSteps.user_click_on_Login_Button(LoginSteps.java:27)\r\n\tat ✽.Then user click on Login Buton(login.feature:7)\r\n",
-  "status": "failed"
+  "duration": 1007640476,
+  "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.user_successfully_Logg_in()"
+  "arguments": [
+    {
+      "val": "Admin",
+      "offset": 30
+    }
+  ],
+  "location": "LoginSteps.user_successfully_Logg_in_as(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 52140069,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 699902409,
+  "duration": 770302899,
   "status": "passed"
 });
 });
