@@ -8,6 +8,9 @@ import utills.BaseClass;
 
 public class AddEmployeePage extends BaseClass{
 	
+	@FindBy (xpath="//b[contains(text(),'PIM')]")
+	public WebElement PIMlink;
+	
 	@FindBy(xpath="//a[contains(@id,'menu_pim_addEmployee')]")
 	public WebElement AddEmployee ;
 	
