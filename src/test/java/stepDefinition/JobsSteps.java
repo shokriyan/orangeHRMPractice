@@ -14,7 +14,7 @@ public class JobsSteps {
 		login = new LoginPage();
 		CommonMethods.enterValues(login.username, username);
 		CommonMethods.enterValues(login.password, password);
-		CommonMethods.click(login.login);
+		CommonMethods.click(login.btnlogin);
 
 	}
 	
