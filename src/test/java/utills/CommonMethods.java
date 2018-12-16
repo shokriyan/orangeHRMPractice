@@ -1,5 +1,6 @@
 package utills;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -34,4 +35,12 @@ public class CommonMethods extends BaseClass{
 		JavascriptExecutor scroll = (JavascriptExecutor) driver;
 		scroll.executeAsyncScript("argument[0].scrollIntoView(True)", element);
 	}
+	
+	public void clickonLinks(String linkText) {
+		WebElement elm = driver.findElement(By.linkText(linkText));
+		WebElement linkElement = waiting(elm);
+		linkElement.click();
+		
+	}
+
 }
