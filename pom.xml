@@ -20,9 +20,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M1</version>
                 <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src\test\resources\Maventestng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
+                    <includes>
+                    <exclude>**/*TestRunner.java</exclude>
+                    </includes>
                 </configuration>
             </plugin>
 

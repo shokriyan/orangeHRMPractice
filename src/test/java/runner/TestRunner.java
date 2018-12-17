@@ -6,10 +6,9 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src\\test\\resources\\features", glue = {
-"" }, dryRun = false, plugin = { "html:test-output" }, monochrome = true)
+@CucumberOptions(features = "src/test/resources/features", glue = { "stepDefinition" }, dryRun = false, plugin = {
+		"html:test-output" }, monochrome = true)
 
 public class TestRunner {
-
 
 }
