@@ -41,7 +41,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 15,
+  "line": 16,
   "name": "",
   "description": "",
   "id": "add-employee-on-orange-hrm;add-employee-and-confirm;",
@@ -107,30 +107,50 @@ formatter.before({
   "duration": 3433625667,
   "status": "passed"
 });
-formatter.background({
-  "line": 3,
-  "name": "",
+formatter.scenario({
+  "line": 18,
+  "name": "invalid login",
   "description": "",
-  "type": "background",
-  "keyword": "Background"
+  "id": "login-to-orang-hrm-page;invalid-login;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 10,
+      "name": "@invalidLog"
+    }
+  ]
 });
 formatter.step({
   "line": 4,
   "name": "user login as \"admin\" and password \"admin123\"",
   "keyword": "Given "
 });
+formatter.step({
+  "line": 13,
+  "name": "user click on Login button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 14,
+  "name": "user cannot successfully login and received message \"Invalid credentials\"",
+  "matchedColumns": [
+    2
+  ],
+  "keyword": "And "
+});
 formatter.match({
   "arguments": [
     {
-      "val": "admin",
-      "offset": 15
+      "val": "Admin",
+      "offset": 12
     },
     {
       "val": "admin123",
       "offset": 36
     }
   ],
-  "location": "JobsSteps.user_login_as_and_password(String,String)"
+  "location": "LoginSteps.user_enter_and(String,String)"
 });
 formatter.result({
   "duration": 1423713273,
@@ -208,7 +228,8 @@ formatter.match({
   "location": "AddEmployeeSteps.i_will_click_on_the_Save_Button()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 312661253,
+  "status": "passed"
 });
 formatter.after({
   "duration": 129543958,
@@ -313,7 +334,8 @@ formatter.match({
   "location": "AddEmployeeSteps.i_click_on_Create_Login_Details_checkbox()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 179148105,
+  "status": "passed"
 });
 formatter.match({
   "location": "AddEmployeeSteps.i_will_click_on_the_Save_Button()"
@@ -329,12 +351,19 @@ formatter.before({
   "duration": 5398757096,
   "status": "passed"
 });
-formatter.background({
-  "line": 3,
-  "name": "",
+formatter.scenario({
+  "line": 21,
+  "name": "invalid login",
   "description": "",
-  "type": "background",
-  "keyword": "Background"
+  "id": "login-to-orang-hrm-page;invalid-login;;5",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 10,
+      "name": "@invalidLog"
+    }
+  ]
 });
 formatter.step({
   "line": 4,
@@ -348,11 +377,11 @@ formatter.match({
       "offset": 15
     },
     {
-      "val": "admin123",
-      "offset": 36
+      "val": "",
+      "offset": 24
     }
   ],
-  "location": "JobsSteps.user_login_as_and_password(String,String)"
+  "location": "LoginSteps.user_enter_and(String,String)"
 });
 formatter.result({
   "duration": 3374245479,
@@ -393,4 +422,5 @@ formatter.step({
 });
 formatter.match({
   "location": "AddEmployeeSteps.i_am_on_PIM_Link_and_select_AddEmployee_option()"
+});
 });
