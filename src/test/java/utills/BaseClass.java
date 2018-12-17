@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class BaseClass {
 
@@ -32,11 +33,15 @@ public class BaseClass {
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			if (getOSName.contains("Mac")) {
-				System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver.exe");
-			} else if (getOSName.contains("Windows")) {
 				System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver");
+			} else if (getOSName.contains("Windows")) {
+				System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver.exe");
 			}
 			driver = new FirefoxDriver();
+		}else if (browserName.equalsIgnoreCase("ghost")) {
+			driver = new HtmlUnitDriver();
+		}else {
+			throw new RuntimeException("Not a acceptance/valid browser");
 		}
 		
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);

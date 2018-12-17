@@ -1,111 +1,110 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("AddEmployee.feature");
 formatter.feature({
   "comments": [
     {
       "line": 1,
-      "value": "#Author: Mohammad"
+      "value": "# Author : Andrea Ramirez"
     }
   ],
   "line": 2,
-  "name": "Login to Orang HRM Page",
+  "name": "Add Employee on Orange HRM",
   "description": "",
-  "id": "login-to-orang-hrm-page",
+  "id": "add-employee-on-orange-hrm",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
-  "line": 11,
-  "name": "invalid login",
+  "line": 8,
+  "name": "Add Employee and confirm",
   "description": "",
-  "id": "login-to-orang-hrm-page;invalid-login",
+  "id": "add-employee-on-orange-hrm;add-employee-and-confirm",
   "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 10,
-      "name": "@invalidLog"
-    }
-  ]
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 10,
+  "name": "I am on PIM Link and select AddEmployee option",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "I enter \"\u003cfirstname\u003e\" and \"\u003cmiddlename\u003e\" and \"\u003clastname\u003e\"",
+  "keyword": "When "
 });
 formatter.step({
   "line": 12,
-  "name": "user enter \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
-  "keyword": "Given "
+  "name": "I click on Create Login Details checkbox",
+  "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "user click on Login button",
+  "name": "I will click on the Save Button",
   "keyword": "Then "
-});
-formatter.step({
-  "line": 14,
-  "name": "user cannot successfully login and received message \"\u003cerrorMsg\u003e\"",
-  "keyword": "And "
 });
 formatter.examples({
   "line": 16,
   "name": "",
   "description": "",
-  "id": "login-to-orang-hrm-page;invalid-login;",
+  "id": "add-employee-on-orange-hrm;add-employee-and-confirm;",
   "rows": [
     {
       "cells": [
-        "username",
-        "password",
-        "errorMsg"
+        "firstname",
+        "middlename",
+        "lastname"
       ],
       "line": 17,
-      "id": "login-to-orang-hrm-page;invalid-login;;1"
+      "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;1"
     },
     {
       "cells": [
-        "Admin",
-        "admin321",
-        "Invalid credentials"
+        "Andre",
+        "I.",
+        "Ramirez"
       ],
       "line": 18,
-      "id": "login-to-orang-hrm-page;invalid-login;;2"
+      "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;2"
     },
     {
       "cells": [
-        "admins",
-        "admin123",
-        "Invalid credentials"
+        "Johnny",
+        "S.",
+        "Walker"
       ],
       "line": 19,
-      "id": "login-to-orang-hrm-page;invalid-login;;3"
+      "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;3"
     },
     {
       "cells": [
+        "Bruce",
         "",
-        "admin123",
-        "Username cannot be empty"
+        "Lee"
       ],
       "line": 20,
-      "id": "login-to-orang-hrm-page;invalid-login;;4"
+      "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;4"
     },
     {
       "cells": [
-        "Admin",
+        "Donald",
         "",
-        "Password cannot be empty"
+        "Trump"
       ],
       "line": 21,
-      "id": "login-to-orang-hrm-page;invalid-login;;5"
+      "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;5"
     },
     {
       "cells": [
-        "",
-        "",
-        "Username cannot be empty"
+        "Steven",
+        "A.",
+        "Spielberg"
       ],
       "line": 22,
-      "id": "login-to-orang-hrm-page;invalid-login;;6"
+      "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;6"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 4674434716,
+  "duration": 3433625667,
   "status": "passed"
 });
 formatter.scenario({
@@ -123,12 +122,8 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "user enter \"Admin\" and \"admin321\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
+  "line": 4,
+  "name": "user login as \"admin\" and password \"admin123\"",
   "keyword": "Given "
 });
 formatter.step({
@@ -151,204 +146,209 @@ formatter.match({
       "offset": 12
     },
     {
-      "val": "admin321",
-      "offset": 24
+      "val": "admin123",
+      "offset": 36
     }
   ],
   "location": "LoginSteps.user_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 351192449,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginSteps.user_click_on_Login_button()"
-});
-formatter.result({
-  "duration": 668068659,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Invalid credentials",
-      "offset": 53
-    }
-  ],
-  "location": "LoginSteps.user_cannot_successfully_login_and_received_message(String)"
-});
-formatter.result({
-  "duration": 34854227,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 743328919,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 4175102498,
+  "duration": 1423713273,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 19,
-  "name": "invalid login",
+  "line": 18,
+  "name": "Add Employee and confirm",
   "description": "",
-  "id": "login-to-orang-hrm-page;invalid-login;;3",
+  "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;2",
   "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 10,
-      "name": "@invalidLog"
-    }
-  ]
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 10,
+  "name": "I am on PIM Link and select AddEmployee option",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "I enter \"Andre\" and \"I.\" and \"Ramirez\"",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "When "
 });
 formatter.step({
   "line": 12,
-  "name": "user enter \"admins\" and \"admin123\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "Given "
+  "name": "I click on Create Login Details checkbox",
+  "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "user click on Login button",
+  "name": "I will click on the Save Button",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 14,
-  "name": "user cannot successfully login and received message \"Invalid credentials\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "And "
+formatter.match({
+  "location": "AddEmployeeSteps.i_am_on_PIM_Link_and_select_AddEmployee_option()"
+});
+formatter.result({
+  "duration": 1053421546,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "admins",
-      "offset": 12
+      "val": "Andre",
+      "offset": 9
     },
     {
-      "val": "admin123",
-      "offset": 25
+      "val": "I.",
+      "offset": 21
+    },
+    {
+      "val": "Ramirez",
+      "offset": 30
     }
   ],
-  "location": "LoginSteps.user_enter_and(String,String)"
+  "location": "AddEmployeeSteps.i_enter_and_and(String,String,String)"
 });
 formatter.result({
-  "duration": 192324124,
-  "status": "passed"
+  "duration": 1020385,
+  "error_message": "java.lang.NullPointerException\n\tat stepDefinition.AddEmployeeSteps.i_enter_and_and(AddEmployeeSteps.java:25)\n\tat ✽.When I enter \"Andre\" and \"I.\" and \"Ramirez\"(AddEmployee.feature:11)\n",
+  "status": "failed"
 });
 formatter.match({
-  "location": "LoginSteps.user_click_on_Login_button()"
+  "location": "AddEmployeeSteps.i_click_on_Create_Login_Details_checkbox()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "AddEmployeeSteps.i_will_click_on_the_Save_Button()"
 });
 formatter.result({
   "duration": 312661253,
   "status": "passed"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "Invalid credentials",
-      "offset": 53
-    }
-  ],
-  "location": "LoginSteps.user_cannot_successfully_login_and_received_message(String)"
-});
-formatter.result({
-  "duration": 39299263,
-  "status": "passed"
-});
 formatter.after({
-  "duration": 728032591,
+  "duration": 129543958,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3942141836,
+  "duration": 2281239267,
   "status": "passed"
 });
-formatter.scenario({
-  "line": 20,
-  "name": "invalid login",
+formatter.background({
+  "line": 3,
+  "name": "",
   "description": "",
-  "id": "login-to-orang-hrm-page;invalid-login;;4",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 10,
-      "name": "@invalidLog"
-    }
-  ]
+  "type": "background",
+  "keyword": "Background"
 });
 formatter.step({
-  "line": 12,
-  "name": "user enter \"\" and \"admin123\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
+  "line": 4,
+  "name": "user login as \"admin\" and password \"admin123\"",
   "keyword": "Given "
-});
-formatter.step({
-  "line": 13,
-  "name": "user click on Login button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 14,
-  "name": "user cannot successfully login and received message \"Username cannot be empty\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "And "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "",
-      "offset": 12
+      "val": "admin",
+      "offset": 15
     },
     {
       "val": "admin123",
-      "offset": 19
+      "offset": 36
     }
   ],
-  "location": "LoginSteps.user_enter_and(String,String)"
+  "location": "JobsSteps.user_login_as_and_password(String,String)"
+});
+formatter.result({
+  "duration": 1773457990,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 19,
+  "name": "Add Employee and confirm",
+  "description": "",
+  "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 10,
+  "name": "I am on PIM Link and select AddEmployee option",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "I enter \"Johnny\" and \"S.\" and \"Walker\"",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 12,
+  "name": "I click on Create Login Details checkbox",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "I will click on the Save Button",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "AddEmployeeSteps.i_am_on_PIM_Link_and_select_AddEmployee_option()"
+});
+formatter.result({
+  "duration": 1892128240,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Johnny",
+      "offset": 9
+    },
+    {
+      "val": "S.",
+      "offset": 22
+    },
+    {
+      "val": "Walker",
+      "offset": 31
+    }
+  ],
+  "location": "AddEmployeeSteps.i_enter_and_and(String,String,String)"
+});
+formatter.result({
+  "duration": 309929,
+  "error_message": "java.lang.NullPointerException\n\tat stepDefinition.AddEmployeeSteps.i_enter_and_and(AddEmployeeSteps.java:25)\n\tat ✽.When I enter \"Johnny\" and \"S.\" and \"Walker\"(AddEmployee.feature:11)\n",
+  "status": "failed"
+});
+formatter.match({
+  "location": "AddEmployeeSteps.i_click_on_Create_Login_Details_checkbox()"
 });
 formatter.result({
   "duration": 179148105,
   "status": "passed"
 });
 formatter.match({
-  "location": "LoginSteps.user_click_on_Login_button()"
+  "location": "AddEmployeeSteps.i_will_click_on_the_Save_Button()"
 });
 formatter.result({
-  "duration": 91236985,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Username cannot be empty",
-      "offset": 53
-    }
-  ],
-  "location": "LoginSteps.user_cannot_successfully_login_and_received_message(String)"
-});
-formatter.result({
-  "duration": 33430567,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
-  "duration": 732648688,
+  "duration": 75479840,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3851444978,
+  "duration": 5398757096,
   "status": "passed"
 });
 formatter.scenario({
@@ -366,32 +366,15 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "user enter \"Admin\" and \"\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
+  "line": 4,
+  "name": "user login as \"admin\" and password \"admin123\"",
   "keyword": "Given "
-});
-formatter.step({
-  "line": 13,
-  "name": "user click on Login button",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 14,
-  "name": "user cannot successfully login and received message \"Password cannot be empty\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "And "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Admin",
-      "offset": 12
+      "val": "admin",
+      "offset": 15
     },
     {
       "val": "",
@@ -401,112 +384,43 @@ formatter.match({
   "location": "LoginSteps.user_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 176895651,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginSteps.user_click_on_Login_button()"
-});
-formatter.result({
-  "duration": 95276177,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Password cannot be empty",
-      "offset": 53
-    }
-  ],
-  "location": "LoginSteps.user_cannot_successfully_login_and_received_message(String)"
-});
-formatter.result({
-  "duration": 36489149,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 732576415,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3818401866,
+  "duration": 3374245479,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 22,
-  "name": "invalid login",
+  "line": 20,
+  "name": "Add Employee and confirm",
   "description": "",
-  "id": "login-to-orang-hrm-page;invalid-login;;6",
+  "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;4",
   "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 10,
-      "name": "@invalidLog"
-    }
-  ]
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 10,
+  "name": "I am on PIM Link and select AddEmployee option",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "I enter \"Bruce\" and \"\" and \"Lee\"",
+  "matchedColumns": [
+    0,
+    1,
+    2
+  ],
+  "keyword": "When "
 });
 formatter.step({
   "line": 12,
-  "name": "user enter \"\" and \"\"",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "Given "
+  "name": "I click on Create Login Details checkbox",
+  "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "user click on Login button",
+  "name": "I will click on the Save Button",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 14,
-  "name": "user cannot successfully login and received message \"Username cannot be empty\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "And "
-});
 formatter.match({
-  "arguments": [
-    {
-      "val": "",
-      "offset": 12
-    },
-    {
-      "val": "",
-      "offset": 19
-    }
-  ],
-  "location": "LoginSteps.user_enter_and(String,String)"
-});
-formatter.result({
-  "duration": 177681252,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginSteps.user_click_on_Login_button()"
-});
-formatter.result({
-  "duration": 109755257,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Username cannot be empty",
-      "offset": 53
-    }
-  ],
-  "location": "LoginSteps.user_cannot_successfully_login_and_received_message(String)"
-});
-formatter.result({
-  "duration": 42643090,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 737890870,
-  "status": "passed"
+  "location": "AddEmployeeSteps.i_am_on_PIM_Link_and_select_AddEmployee_option()"
 });
 });
