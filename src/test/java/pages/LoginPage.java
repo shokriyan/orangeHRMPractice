@@ -19,12 +19,14 @@ public class LoginPage extends BaseClass {
 	public WebElement btnlogin;
 	
 
-
 	@FindBy(how = How.XPATH, using = "//img[contains(@src,'logo')]")
 	public WebElement logo;
 
 	@FindBy(how=How.ID , using="welcome")
 	private WebElement LoggedUser;
+
+	@FindBy (how=How.ID, using="spanMessage")
+	WebElement spanMessage;
 	
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
@@ -34,6 +36,11 @@ public class LoginPage extends BaseClass {
 		String getUser=LoggedUser.getText();
 		return getUser.trim().substring(8);
 		
+	}
+	
+	public String invalidLog() {
+		String getUser=spanMessage.getText();
+		return getUser.trim();
 	}
 
 
