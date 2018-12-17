@@ -14,9 +14,11 @@ public class LoginPage extends BaseClass {
 
 	@FindBy(how = How.ID, using = "txtPassword")
 	public WebElement password;
-
-	@FindBy(how = How.ID, using = "btnLogin")
+	
+	@FindBy(how=How.ID, using="btnLogin")
 	public WebElement btnlogin;
+	
+
 
 	@FindBy(how = How.XPATH, using = "//img[contains(@src,'logo')]")
 	public WebElement logo;
