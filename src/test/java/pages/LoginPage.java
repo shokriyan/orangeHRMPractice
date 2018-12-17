@@ -15,7 +15,6 @@ public class LoginPage {
 	@FindBy(how=How.ID, using="btnLogin")
 	public WebElement login;
 	
-
 	
 	
 	

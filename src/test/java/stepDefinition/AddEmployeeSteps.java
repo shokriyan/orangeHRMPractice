@@ -12,7 +12,10 @@ public class AddEmployeeSteps {
 	
 	@Given("^I am on PIM Link and select AddEmployee option$")
 	public void i_am_on_PIM_Link_and_select_AddEmployee_option() throws Throwable {
-		CommonMethods.click(addEmp.PIMlink);
+		
+		
+		CommonMethods.clickonLinks("PIM");
+		CommonMethods.clickonLinks("Add Employee");
 		
 	    
 	}

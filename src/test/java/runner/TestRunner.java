@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features= {"src/test/resources/features"}
 	,glue= ""
 	,plugin = {"pretty"}	
-	,dryRun = true
+	,dryRun = false
 	,strict = false
 	,monochrome = true
 		
