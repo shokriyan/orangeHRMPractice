@@ -43,7 +43,7 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "confirm employee is available at list",
+  "name": "confirm \"\u003cemployeename\u003e\" is available at list",
   "keyword": "And "
 });
 formatter.examples({
@@ -84,7 +84,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 4857441115,
+  "duration": 4907053682,
   "status": "passed"
 });
 formatter.background({
@@ -113,7 +113,7 @@ formatter.match({
   "location": "JobsSteps.user_login_as_and_password(String,String)"
 });
 formatter.result({
-  "duration": 1556397511,
+  "duration": 1640971647,
   "status": "passed"
 });
 formatter.scenario({
@@ -150,14 +150,17 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "confirm employee is available at list",
+  "name": "confirm \"abbas Azaad\" is available at list",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "And "
 });
 formatter.match({
   "location": "EmployeeListSteps.i_am_on_PIM_Link_and_select_AddEmployee_option()"
 });
 formatter.result({
-  "duration": 1385841830,
+  "duration": 1714792851,
   "status": "passed"
 });
 formatter.match({
@@ -170,28 +173,35 @@ formatter.match({
   "location": "EmployeeListSteps.user_enter_employee_name(String)"
 });
 formatter.result({
-  "duration": 1559654,
-  "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.EmployeeListSteps.user_enter_employee_name(EmployeeListSteps.java:20)\r\n\tat ✽.When user enter \"abbas Azaad\"(EmployeeList.feature:10)\r\n",
-  "status": "failed"
+  "duration": 193886772,
+  "status": "passed"
 });
 formatter.match({
   "location": "EmployeeListSteps.click_on_search()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 4427506875,
+  "status": "passed"
 });
 formatter.match({
-  "location": "EmployeeListSteps.confirm_employee_is_available_at_list()"
+  "arguments": [
+    {
+      "val": "abbas Azaad",
+      "offset": 9
+    }
+  ],
+  "location": "EmployeeListSteps.confirm_employee_is_available_at_list(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 53003008,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 780571594,
+  "duration": 766722447,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4142137645,
+  "duration": 4433972576,
   "status": "passed"
 });
 formatter.background({
@@ -220,7 +230,7 @@ formatter.match({
   "location": "JobsSteps.user_login_as_and_password(String,String)"
 });
 formatter.result({
-  "duration": 1351930153,
+  "duration": 1301126141,
   "status": "passed"
 });
 formatter.scenario({
@@ -257,14 +267,17 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "confirm employee is available at list",
+  "name": "confirm \"mamad Raha\" is available at list",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "And "
 });
 formatter.match({
   "location": "EmployeeListSteps.i_am_on_PIM_Link_and_select_AddEmployee_option()"
 });
 formatter.result({
-  "duration": 1431265955,
+  "duration": 1329080172,
   "status": "passed"
 });
 formatter.match({
@@ -277,28 +290,35 @@ formatter.match({
   "location": "EmployeeListSteps.user_enter_employee_name(String)"
 });
 formatter.result({
-  "duration": 431503,
-  "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.EmployeeListSteps.user_enter_employee_name(EmployeeListSteps.java:20)\r\n\tat ✽.When user enter \"mamad Raha\"(EmployeeList.feature:10)\r\n",
-  "status": "failed"
+  "duration": 218558131,
+  "status": "passed"
 });
 formatter.match({
   "location": "EmployeeListSteps.click_on_search()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 4420452295,
+  "status": "passed"
 });
 formatter.match({
-  "location": "EmployeeListSteps.confirm_employee_is_available_at_list()"
+  "arguments": [
+    {
+      "val": "mamad Raha",
+      "offset": 9
+    }
+  ],
+  "location": "EmployeeListSteps.confirm_employee_is_available_at_list(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 261233722,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 780410796,
+  "duration": 767801846,
   "status": "passed"
 });
 formatter.before({
-  "duration": 4027760731,
+  "duration": 4051738435,
   "status": "passed"
 });
 formatter.background({
@@ -327,7 +347,7 @@ formatter.match({
   "location": "JobsSteps.user_login_as_and_password(String,String)"
 });
 formatter.result({
-  "duration": 1282671161,
+  "duration": 1341916634,
   "status": "passed"
 });
 formatter.scenario({
@@ -364,14 +384,17 @@ formatter.step({
 });
 formatter.step({
   "line": 12,
-  "name": "confirm employee is available at list",
+  "name": "confirm \"ali shoki\" is available at list",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "And "
 });
 formatter.match({
   "location": "EmployeeListSteps.i_am_on_PIM_Link_and_select_AddEmployee_option()"
 });
 formatter.result({
-  "duration": 1521940147,
+  "duration": 1245753503,
   "status": "passed"
 });
 formatter.match({
@@ -384,24 +407,31 @@ formatter.match({
   "location": "EmployeeListSteps.user_enter_employee_name(String)"
 });
 formatter.result({
-  "duration": 599144,
-  "error_message": "java.lang.NullPointerException\r\n\tat stepDefinition.EmployeeListSteps.user_enter_employee_name(EmployeeListSteps.java:20)\r\n\tat ✽.When user enter \"ali shoki\"(EmployeeList.feature:10)\r\n",
-  "status": "failed"
+  "duration": 201990388,
+  "status": "passed"
 });
 formatter.match({
   "location": "EmployeeListSteps.click_on_search()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 4449433123,
+  "status": "passed"
 });
 formatter.match({
-  "location": "EmployeeListSteps.confirm_employee_is_available_at_list()"
+  "arguments": [
+    {
+      "val": "ali shoki",
+      "offset": 9
+    }
+  ],
+  "location": "EmployeeListSteps.confirm_employee_is_available_at_list(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 287345847,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 794155595,
+  "duration": 782368596,
   "status": "passed"
 });
 });

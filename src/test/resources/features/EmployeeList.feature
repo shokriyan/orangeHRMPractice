@@ -9,7 +9,7 @@ Feature: Employee List Search
     Given I am on PIM Link and select Employee List option
     When user enter "<employeename>"
     Then Click on search
-    And confirm employee is available at list
+    And confirm "<employeename>" is available at list
 
     Examples: 
       | employeename |
