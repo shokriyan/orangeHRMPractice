@@ -29,9 +29,7 @@ public class EmployeeListSteps {
 
 	@Then("^Click on search$")
 	public void click_on_search() throws Throwable {
-		Thread.sleep(2000);
 		CommonMethods.click(empsrch.searchBtn);
-		Thread.sleep(2000);
 
 	}
 
