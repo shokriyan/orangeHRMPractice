@@ -13,7 +13,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 4563975137,
+  "duration": 4866472440,
   "status": "passed"
 });
 formatter.background({
@@ -47,82 +47,68 @@ formatter.match({
   "location": "JobsSteps.user_login_as_and_password(String,String)"
 });
 formatter.result({
-  "duration": 2178392726,
+  "duration": 1773198372,
   "status": "passed"
 });
 formatter.match({
   "location": "JobsSteps.user_on_job_page()"
 });
 formatter.result({
-  "duration": 1649755023,
+  "duration": 1316016282,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 9,
-  "name": "Adding job titles",
+  "line": 18,
+  "name": "Error massage for blank job title",
   "description": "",
-  "id": "jobs-feature;adding-job-titles",
+  "id": "jobs-feature;error-massage-for-blank-job-title",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 8,
-      "name": "@Title"
+      "line": 17,
+      "name": "@titleError"
     }
   ]
 });
 formatter.step({
-  "line": 10,
-  "name": "user fill up information",
-  "rows": [
-    {
-      "cells": [
-        "jobTitle"
-      ],
-      "line": 11
-    },
-    {
-      "cells": [
-        "Automation Tester"
-      ],
-      "line": 12
-    },
-    {
-      "cells": [
-        "Scrum Master"
-      ],
-      "line": 13
-    },
-    {
-      "cells": [
-        "Developer"
-      ],
-      "line": 14
-    }
-  ],
+  "line": 19,
+  "name": "user click on add button",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 20,
+  "name": "user don\u0027t provide job title",
   "keyword": "When "
 });
 formatter.step({
-  "line": 15,
-  "name": "user log out",
+  "line": 21,
+  "name": "error massager appears",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "JobsSteps.user_fill_up_information(DataTable)"
+  "location": "JobsSteps.user_click_on_add_button()"
 });
 formatter.result({
-  "duration": 3646307873,
+  "duration": 629037038,
   "status": "passed"
 });
 formatter.match({
-  "location": "JobsSteps.user_log_out()"
+  "location": "JobsSteps.user_don_t_provide_job_title()"
 });
 formatter.result({
-  "duration": 601423080,
+  "duration": 153178595,
+  "status": "passed"
+});
+formatter.match({
+  "location": "JobsSteps.error_massager_appears()"
+});
+formatter.result({
+  "duration": 33875554,
   "status": "passed"
 });
 formatter.after({
-  "duration": 135935139,
+  "duration": 143448784,
   "status": "passed"
 });
 });

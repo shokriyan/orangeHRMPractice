@@ -30,6 +30,7 @@ public class JobsSteps {
 
 	@Given("^user on job page$")
 	public void user_on_job_page() throws Throwable {
+		job = new JobTitle();
 		CommonMethods.clickonLinks("Admin");
 		CommonMethods.clickonLinks("Job");
 		CommonMethods.clickonLinks("Job Titles");
@@ -37,10 +38,7 @@ public class JobsSteps {
 
 	@When("^user fill up information$")
 	public void user_fill_up_information(DataTable jobTitleTable) throws Throwable {
-		
-		job = new JobTitle();
-		
-		
+
 		List<Map<String, String>> maps = jobTitleTable.asMaps(String.class, String.class);
 
 		for (Map<String, String> mapcell : maps) {
@@ -53,11 +51,28 @@ public class JobsSteps {
 			Assert.assertEquals(jobtitle, getTitle);
 		}
 	}
-	
+
 	@Then("^user log out$")
 	public void user_log_out() throws Throwable {
-	  CommonMethods.clickonLinks("Welcome Admin");
-	  CommonMethods.clickonLinks("Logout");
-	  
+		CommonMethods.clickonLinks("Welcome Admin");
+		CommonMethods.clickonLinks("Logout");
+
+	}
+
+	@Given("^user click on add button$")
+	public void user_click_on_add_button() throws Throwable {
+		CommonMethods.click(job.addBtn);
+	}
+
+	@When("^user don't provide job title$")
+	public void user_don_t_provide_job_title() throws Throwable {
+		CommonMethods.click(job.saveBtn);
+	}
+
+	@Then("^error massager appears$")
+	public void error_massager_appears() throws Throwable {
+		boolean exist = job.verifyError();
+		Assert.assertTrue(exist);
+
 	}
 }
