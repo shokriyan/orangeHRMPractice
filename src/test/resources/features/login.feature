@@ -2,6 +2,7 @@
 Feature: Login to Orang HRM Page
 
   @validLog
+
   Scenario: valid login
     Given user enter "Admin" and "admin123"
     Then user click on Login button
