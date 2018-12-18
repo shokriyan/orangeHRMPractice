@@ -18,6 +18,7 @@ public class BaseClass {
 	
 
 	public void setUp() {
+		
 
 		initProperties(Constants.configFilePath);
 		String browserName=prop.getProperty("browser");

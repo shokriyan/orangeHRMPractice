@@ -1,15 +1,15 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("AddEmployee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("jobs.feature");
 formatter.feature({
   "comments": [
     {
       "line": 1,
-      "value": "# Author : Andrea Ramirez"
+      "value": "#Author: Tannaz Nazar"
     }
   ],
   "line": 2,
-  "name": "Add Employee on Orange HRM",
+  "name": "Jobs feature",
   "description": "",
-  "id": "add-employee-on-orange-hrm",
+  "id": "jobs-feature",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
@@ -115,8 +115,8 @@ formatter.background({
   "keyword": "Background"
 });
 formatter.step({
-  "line": 4,
-  "name": "user login as \"admin\" and password \"admin123\"",
+  "line": 5,
+  "name": "user login as \"Admin\" and password \"admin123\"",
   "keyword": "Given "
 });
 formatter.match({
@@ -137,12 +137,18 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "line": 18,
-  "name": "Add Employee and confirm",
+  "line": 9,
+  "name": "Adding job titles",
   "description": "",
-  "id": "add-employee-on-orange-hrm;add-employee-and-confirm;;2",
+  "id": "jobs-feature;adding-job-titles",
   "type": "scenario",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 8,
+      "name": "@Title"
+    }
+  ]
 });
 formatter.step({
   "line": 10,
@@ -179,12 +185,16 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "Andre",
-      "offset": 9
+      "cells": [
+        "jobTitle"
+      ],
+      "line": 11
     },
     {
-      "val": "I.",
-      "offset": 21
+      "cells": [
+        "Automation Tester"
+      ],
+      "line": 12
     },
     {
       "val": "Ramirez",
@@ -237,8 +247,10 @@ formatter.match({
       "offset": 15
     },
     {
-      "val": "admin123",
-      "offset": 36
+      "cells": [
+        "Developer"
+      ],
+      "line": 14
     }
   ],
   "location": "JobsSteps.user_login_as_and_password(String,String)"
@@ -271,17 +283,12 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "line": 12,
-  "name": "I click on Create Login Details checkbox",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 13,
-  "name": "I will click on the Save Button",
+  "line": 15,
+  "name": "user log out",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_am_on_PIM_Link_and_select_AddEmployee_option()"
+  "location": "JobsSteps.user_fill_up_information(DataTable)"
 });
 formatter.result({
   "duration": 1376923068,
