@@ -22,10 +22,11 @@ public class AddEmployeeSteps {
 		
 	
 		CommonMethods.clickonLinks("PIM");
+		CommonMethods.clickonLinks("Add Employee");
 		
-		Thread.sleep(2000);
-		Actions obj= new Actions(BaseClass.driver);
-		obj.moveToElement(addEmp.AddEmployee).click();
+//		Thread.sleep(2000);
+//		Actions obj= new Actions(BaseClass.driver);
+//		obj.moveToElement(addEmp.AddEmployee).click();
 		
 		
 	    
@@ -41,7 +42,7 @@ public class AddEmployeeSteps {
 
 	@When("^I click on Create Login Details checkbox$")
 	public void i_click_on_Create_Login_Details_checkbox() throws Throwable {
-		CommonMethods.click(addEmp.chkbox);
+		//CommonMethods.click(addEmp.chkbox);
 	}
 
 	@Then("^I will click on the Save Button$")
@@ -51,8 +52,9 @@ public class AddEmployeeSteps {
 
 	@Then("^verifying employee added and see \"([^\"]*)\"$")
 	public void verifying_employee_added_and_see(String value) throws Throwable {
-	  WebElement profile = addEmp.profileName;
-	  assertEquals(profile, value);
+	   
+		String name=addEmp.profileName.getText();
+	     assertEquals(name, value);
 
 }
 	}

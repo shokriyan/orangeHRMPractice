@@ -29,7 +29,7 @@ public class AddEmployeePage extends BaseClass{
 	@FindBy(id="btnSave")
 	public WebElement saveButton ;
 	
-	@FindBy (xpath="//h1[contains(text(),'"+" "+"')]")
+	@FindBy (xpath="/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/h1[1]")
 	public WebElement profileName;
 	
 	@FindBy (xpath="menu_pim_addEmployee")

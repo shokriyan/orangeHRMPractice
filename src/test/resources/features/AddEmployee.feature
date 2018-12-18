@@ -18,10 +18,10 @@ Scenario Outline: Add Employee and confirm
 Examples:
 	23
 	|firstname| middlename| lastname| profilename |
-	|Alejandra|I.					|Ramirez	|Alejandra Ramirez|
-	|Johnny		|S.		      |Walker		|Johnny Walker |
+	|Alejandra|I.					|Ramirez	|Alejandra I. Ramirez|
+	|Johnny		|S.		      |Walker		|Johnny S. Walker |
 	|Bruce 		|						|Lee			|Bruce Lee		 |
 	|Donald 	|						|Trump		|Donald Trump  |
-	|Steven		|A.					|Spielberg|Steven Spielberg|
+	|Steven		|A.					|Spielberg|Steven A. Spielberg|
 	
 
