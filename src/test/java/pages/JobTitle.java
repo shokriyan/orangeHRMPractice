@@ -31,19 +31,19 @@ public class JobTitle extends BaseClass {
 	public String getJobTitleTable(String dataTable) {
 
 		List<WebElement> col = tableBody.findElements(By.xpath("tr/td[2]"));
-		
+
 		String actualValue = null;
-		
+
 		for (WebElement webElement : col) {
 			String jobtitle = webElement.getText();
-			
+
 			if (jobtitle.equals(dataTable)) {
-				
+
 				actualValue = jobtitle;
 				break;
 
 			}
-			
+
 		}
 		return actualValue;
 	}
