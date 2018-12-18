@@ -1,5 +1,6 @@
 # Author : Andrea Ramirez
 Feature: Add Employee on Orange HRM
+
 Background: 
 Given user login as "admin" and password "admin123"
  
@@ -11,14 +12,16 @@ Scenario Outline: Add Employee and confirm
 	When I enter "<firstname>" and "<middlename>" and "<lastname>" 
 	And I click on Create Login Details checkbox
 	Then I will click on the Save Button
+	And verifying employee added and see "<profilename>" 
+	
 	
 Examples:
-	
-	|firstname| middlename| lastname|
-	|Andre 		|I.					|Ramirez	|
-	|Johnny		|S.		      |Walker		|
-	|Bruce 		|						|Lee			|
-	|Donald 	|						|Trump		|
-	|Steven		|A.					|Spielberg|
+	23
+	|firstname| middlename| lastname| profilename |
+	|Alejandra|I.					|Ramirez	|Alejandra Ramirez|
+	|Johnny		|S.		      |Walker		|Johnny Walker |
+	|Bruce 		|						|Lee			|Bruce Lee		 |
+	|Donald 	|						|Trump		|Donald Trump  |
+	|Steven		|A.					|Spielberg|Steven Spielberg|
 	
 
