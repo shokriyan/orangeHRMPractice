@@ -11,7 +11,7 @@ public class AddEmployeePage extends BaseClass{
 	@FindBy (xpath="//b[contains(text(),'PIM')]")
 	public WebElement PIMlink;
 	
-	@FindBy(xpath="//a[contains(@id,'menu_pim_addEmployee')]")
+	@FindBy(id="menu_pim_addEmployee")
 	public WebElement AddEmployee ;
 	
 	@FindBy(id="firstName")
@@ -28,6 +28,12 @@ public class AddEmployeePage extends BaseClass{
 	
 	@FindBy(id="btnSave")
 	public WebElement saveButton ;
+	
+	@FindBy (xpath="/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/h1[1]")
+	public WebElement profileName;
+	
+	@FindBy (xpath="menu_pim_addEmployee")
+	public WebElement AddEmployeeLink;
 	
 	public AddEmployeePage(){
 		PageFactory.initElements(driver, this); 
