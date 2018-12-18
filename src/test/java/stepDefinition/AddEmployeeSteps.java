@@ -10,15 +10,7 @@ public class AddEmployeeSteps {
 
 	AddEmployeePage addEmp;
 	
-	@Given("^I am on PIM Link and select AddEmployee option$")
-	public void i_am_on_PIM_Link_and_select_AddEmployee_option() throws Throwable {
-		
-		
-		CommonMethods.clickonLinks("PIM");
-		CommonMethods.clickonLinks("Add Employee");
-		
-	    
-	}
+	
 
 	@When("^I enter \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void i_enter_and_and(String value1, String value2, String value3) throws Throwable {
