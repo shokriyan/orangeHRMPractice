@@ -11,7 +11,7 @@ Feature: Login to Orang HRM Page
   Scenario Outline: invalid login
     Given user enter "<username>" and "<password>"
     Then user click on Login button
-    And user cannot successfully login and received message "<errorMsg>"
+    And user cannot successfully login and received message "<errorMsg>" 
 
     Examples: 
       | username | password | errorMsg                 |
