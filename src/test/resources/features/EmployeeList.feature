@@ -13,6 +13,6 @@ Feature: Employee List Search
 
     Examples: 
       | employeename |
-      | abbas Azaad  |
-      | mamad Raha   |
-      | ali shoki    |
+      | Alejandra I. |
+      | Johnny S.    |
+      | Donald       |

@@ -26,20 +26,20 @@ public class EmployeeListPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String getEmployeeList(String data) {
+	public String getEmployeeList(String expected) {
 		
 		List<WebElement> col = tableBody.findElements(By.xpath("tr/td[3]"));
-		String empList = null;
+		String actualValue = null;
 		for (WebElement webElement : col) {
 			String jobtitle = webElement.getText();
-			if(jobtitle.equals(data)) {
-				jobtitle = empList;
+			if(jobtitle.contains(expected)) {
+				actualValue = jobtitle;
 				break;
 			}
 
 			
 		}
-		return data;
+		return actualValue;
 
 	}
 	
