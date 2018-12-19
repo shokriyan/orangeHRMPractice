@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/features",tags= {"@titleError"}, glue = { "stepDefinition" }, dryRun = false, plugin = {
+@CucumberOptions(features="src/test/resources/features",tags= {"@empsearch"}, glue = { "stepDefinition" }, dryRun = false, plugin = {
 		"html:test-output" }, monochrome = true)
 
 public class TestRunner {
